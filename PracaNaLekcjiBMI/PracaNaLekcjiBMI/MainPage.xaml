@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracaNaLekcjiBMI.MainPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Przejdź do zapisanych" Clicked="GoToSavedBMI"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="30">
+        <Label Text="Płeć" FontSize="20"/>
+        <StackLayout RadioButtonGroup.GroupName="gender" Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout HorizontalOptions="StartAndExpand" Margin="20, 0   ">
+                <Label Text="Kobieta"/>
+                <RadioButton x:Name="female" GroupName="gender" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Mężczyzna"/>
+                <RadioButton x:Name="male" GroupName="gender" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+
+        <Label Text="Wzrost" FontSize="20"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="height_Entry" WidthRequest="150"/>
+            <Label Text=" cm"/>
+        </StackLayout>
+
+
+        <Label Text="Waga" FontSize="20"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="weight_Entry" WidthRequest="150"/>
+            <Label Text=" kg"/>
+        </StackLayout>
+
+        <Button Text="Oblicz" Clicked="CalculateBMI"/>
+
+        <Label x:Name="scoreLbl"/>
+        <Label x:Name="resultLbl"/>
+
+        <Button Text="Zapisz" IsVisible="False" IsEnabled="False" x:Name="saveBtn" Clicked="SaveBMI" HorizontalOptions="CenterAndExpand" WidthRequest="100" Margin="20"/>
+
+        <Label x:Name="genderInvis" IsVisible="False"/>
+    </StackLayout>
+
+</ContentPage>
