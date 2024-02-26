@@ -7,7 +7,7 @@ namespace PracaNaLekcjiBMI
 {
     public class BMIResult
     {
-        private static int LastId { get; set; }
+        private static int LastId;
         public int Id { get; set; }
         public string Title { get; set; }
         public DateTime Date { get; set; }
@@ -40,6 +40,10 @@ namespace PracaNaLekcjiBMI
             Gender = gender;
             Score = score;
             Result = result;
+        }
+        public BMIResult() 
+        { 
+        
         }
         public void SetLastId()
         {

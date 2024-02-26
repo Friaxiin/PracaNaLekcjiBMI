@@ -35,8 +35,8 @@
 
         <Button Text="Oblicz" Clicked="CalculateBMI"/>
 
-        <Label x:Name="scoreLbl"/>
-        <Label x:Name="resultLbl"/>
+        <Label x:Name="scoreLbl" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Label x:Name="resultLbl" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
         <Button Text="Zapisz" IsVisible="False" IsEnabled="False" x:Name="saveBtn" Clicked="SaveBMI" HorizontalOptions="CenterAndExpand" WidthRequest="100" Margin="20"/>
 

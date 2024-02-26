@@ -75,6 +75,7 @@ namespace PracaNaLekcjiBMI
 
             scoreLbl.Text = score.ToString("0.00");
             resultLbl.Text = result;
+            genderInvis.Text = gender;
 
             saveBtn.IsEnabled = true;
             saveBtn.IsVisible = true;
@@ -106,7 +107,7 @@ namespace PracaNaLekcjiBMI
 
             results.Add(bmi);
 
-            string serializedBMI = JsonConvert.SerializeObject(bmi);
+            string serializedBMI = JsonConvert.SerializeObject(results);
             File.WriteAllText(path, serializedBMI);
 
             saveBtn.IsEnabled = false;

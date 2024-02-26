@@ -11,7 +11,7 @@ namespace PracaNaLekcjiBMI
         {
             get
             {
-                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BMI2.json");
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BMI5.json");
             }
         }
         public App()
